@@ -13,5 +13,6 @@ export class AppComponent {
   items: Observable<any[]>;
   constructor(db: AngularFirestore) {
     this.items = db.collection('items').valueChanges();
+    console.log(db.collection('items'));
   }
 }
