@@ -24,9 +24,6 @@ export class AppComponent {
    */
   public logMessage(){
     this.logger.log('Test Messsage from angular app','error',response => {
-      console.log(response);
-    }, error => {
-      console.log(error);
-    });
+    }, error => {});
   }
 }

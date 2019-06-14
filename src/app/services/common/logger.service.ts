@@ -12,7 +12,14 @@ export class LoggerService {
     private constants: Constants
   ) { }
 
-  public log(message: String, type, successCallback, failureCallback) {
+  /**
+   * @desc method to log the messages to firebase.
+   * @param message the message to be logged.
+   * @param type type of the log(ERROR, INFO, DEBUG...etc).
+   * @param successCallback success callback function.
+   * @param failureCallback failure callback function.
+   */
+  public log(message: String, type: any, successCallback, failureCallback) {
     let logRequest = {
       type : this.constants.LOG_TYPE[type],
       stacktrace: message,
